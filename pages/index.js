@@ -19,6 +19,7 @@ export default function Home () {
           {title}
         </h1>
         <h2>Minhas tarefas diárias</h2>
+        <h2>Ramificação nova (branch)</h2>
       </main>
 
       <footer className={styles.footer}>
