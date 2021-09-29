@@ -1,15 +1,17 @@
 import React from 'react';
-import {Card, Container} from 'react-bootstrap';
+import {Card, CardContent, Typography} from '@mui/material/';
 
 const AppBulletList = props => (
-  <Container>
-    <Card border="primary">
-      <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-      </Card.Body>
-      <Card.Text>Lista de bullets</Card.Text>
-    </Card>
-  </Container>
+  <Card>
+    <CardContent>
+      <Typography variant="h4">
+        {props.title}
+      </Typography>
+      <Typography variant="body2">
+        bullets
+      </Typography>
+    </CardContent>
+  </Card>
 );
 
 export default AppBulletList;
