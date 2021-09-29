@@ -1,57 +1,53 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 
 const AppNavBar = props => (
-  <Box sx={{flexGrow: 1}}>
-    <AppBar position="static">
-      <Toolbar variant="dense">
-        <IconButton edge="start" color="inherit" aria-label="menu" sx={{mr: 2}}>
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" color="inherit" component="div">
+  <nav className="navbar" role="navigation" aria-label="main navigation">
+    <div id="navbarBasicExample" className="navbar-menu">
+      <div className="navbar-start">
+        <a className="navbar-item">
           {props.title}
-        </Typography>
-      </Toolbar>
-    </AppBar>
-  </Box>
+        </a>
+        <a className="navbar-item">
+          Documentation
+        </a>
+        <div className="navbar-item has-dropdown is-hoverable">
+          <a className="navbar-link">
+            More
+          </a>
+          <div className="navbar-dropdown">
+            <a className="navbar-item">
+              About
+            </a>
+            <a className="navbar-item">
+              Jobs
+            </a>
+            <a className="navbar-item">
+              Contact
+            </a>
+            <hr className="navbar-divider" />
+            <a className="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="navbar-end">
+        <div className="navbar-item">
+          <div className="buttons">
+            <a className="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a className="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 );
 
 export default AppNavBar;
 
 /*
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-
-export default function DenseAppBar () {
-  return (
-    <Box sx={{flexGrow: 1}}>
-      <AppBar position="static">
-        <Toolbar variant="dense">
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{mr: 2}}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" color="inherit" component="div">
-            Photos
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </Box>
-  );
-}
-
 */
