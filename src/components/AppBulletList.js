@@ -1,28 +1,17 @@
 import React from 'react';
+import {Card, CardContent, Typography} from '@mui/material/';
 
 const AppBulletList = props => (
-  <div className="card">
-    <div className="card-content">
-      <p className="title">
+  <Card>
+    <CardContent>
+      <Typography variant="h4">
         {props.title}
-      </p>
-    </div>
-    <footer className="card-footer">
-      <p className="card-footer-item">
-        <span>
-          View on
-          <a href="https://twitter.com/codinghorror/status/506010907021828096">
-            Twitter
-          </a>
-        </span>
-      </p>
-      <p className="card-footer-item">
-        <span>
-          Share on <a href="#">Facebook</a>
-        </span>
-      </p>
-    </footer>
-  </div>
+      </Typography>
+      <Typography variant="body2">
+        bullets
+      </Typography>
+    </CardContent>
+  </Card>
 );
 
 export default AppBulletList;
