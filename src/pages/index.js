@@ -3,6 +3,37 @@ import Head from 'next/head';
 import AppNavBar from '../components/AppNavBar';
 import AppBulletList from '../components/AppBulletList';
 
+const itens = {
+  date: '06/10/2021',
+  data: [
+    {
+      id: 1,
+      type: 'task',
+      title: 'Codificar o componente bullte list',
+    },
+    {
+      id: 2,
+      type: 'task',
+      title: 'Codificar o componente bullte list',
+    },
+    {
+      id: 3,
+      type: 'event',
+      title: '8h30 Momento síncrono de Prog Orientada a serviços',
+    },
+    {
+      id: 4,
+      type: 'note',
+      title: 'Lembrar de falar sobre key nas listas',
+    },
+    {
+      id: 5,
+      type: 'note',
+      title: 'Lembrar de falar sobre lista e mapas',
+    },
+  ],
+};
+
 export default function Home () {
   let title = 'Meu Bullet Journal';
 
@@ -15,9 +46,7 @@ export default function Home () {
       </Head>
 
       <AppNavBar title={title} />
-      <AppBulletList title="29/09/2021" />
-      <AppBulletList title="30/09/2021" />
-      <AppBulletList title="01/10/2021" />
+      <AppBulletList date={itens.date} bullets={itens.data} />
     </div>
   );
 }
